@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap');
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0%;
+    padding: 0;
+    font-family: 'Dosis', sans-serif;  
+    font-size: 15px;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    /* The overflo Property */
+    /* Determines what to do if the content overflows the element's box. Setting overflow to hidden will hide/clip the overflowing contect */
+    overflow: hidden;
+   
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    
+}
+.btn-1{
+    height: 38px;
+    background-color: #eb4442;
+    box-shadow: 3px 3px 3px 3px rgb(160, 83, 83) inset;
+    border: 0;
+    padding: 0 20px 0 20px;
+    color: #fff;
+    border-radius: 15px;
+}
+.light, .dark{
+    
+    padding: 15px;
+    margin: 10px 0 10px 0;
+}
+.light{
+    background-color: #e6e6e6;
+    color: #2d2b3e;
+}
+.dark{
+    background-color: #2d2b3e;
+    color: #e6e6e6;
+    
+}
+/* Header */
+header{
+   
+    background-color: #2d2b3e;
+    color: #e6e6e6;
+/* setting min-height so the height for the header section can expand if needed */
+    min-height: 70px;
+    border-bottom: 3px solid #eb4442;
+    padding:5px 0;
+}
+header > .container{
+    /* this flex is taking the two elements with the name and ul as boxes. */
+    display: flex;
+    justify-content: space-between;
+}
+header ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+header li{
+    list-style: none;
+    padding: 0 20px;
+}
+header a{
+    text-decoration: none;
+    color: #e6e6e6;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+#highlight, #current a{
+    color:#eb4442;
+    font-weight: bold;
+}
+li:hover{
+    color: #ccc;
+    font-weight: bold;
+    border-bottom: 2px solid #e6e6e6;
+}
+
+/* Showcase section */
+#showcase{
+    min-height: 400px;
+    background-image: url(Images/laptop.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+
+}
+
+#showcase h1{
+    margin-top: 100px;
+    margin-bottom: 10px;
+    font-size: 55px;
+
+}
+#showcase p{
+    font-size: 20px;
+}
+/* Newsletter */
+#newsletter{
+    background-color: #2d2b3e;
+    color: #e6e6e6;
+    padding:15px;
+ 
+}
+#newsletter>.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#newsletter input{
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+    border-radius: 20px;
+}
+
+/* boxes */
+#boxes{
+    margin-top: 20px;
+
+}
+#boxes > .container{
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+    width: 30%;
+    text-align: center;
+    padding: 10px;
+}
+i{
+    font-size: 225px;
+}
+.fa-html5{
+    color: #d45632;
+}
+.fa-css3-alt{
+    color: #2d50dc;
+}
+.fa-js{
+    color: #f3df50;
+}
+
+/* About */
+#about{
+    background-color: #2d2b3e;
+    padding: 20px;
+}
+#about > .container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 50px;
+}
+#about .main-col{
+    color: #e6e6e6;
+}
+#about .sidebar{
+    margin-top: 10px;
+}
+
+/* Services */
+#services > .container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 50px;
+}
+
+#services li{
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 5px;
+    background-color: #e6e6e6;
+}
+
+#services .sidebar{
+    margin-top: 50px;
+}
+#services input, #services textarea{
+    padding: 5px;
+    width: 90%;
+}
+footer{
+    background-color: #2d2b3e;
+    color: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px){
+    header > .container, #newsletter >.container, #boxes > .container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    #showcase .container{
+        padding-bottom: 50px;
+    }
+    .box{
+        width: 80%;
+    }
+    #about >.container,
+    #services > .container{
+        grid-template-columns: 1fr;
+       
+    }
+
+}
